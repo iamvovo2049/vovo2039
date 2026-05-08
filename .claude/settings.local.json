@@ -24,7 +24,22 @@
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" \"https://iamvovo2049.github.io/vovo2039/00-花园说明/about\")",
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" https://iamvovo2049.github.io/vovo2039/index.xml)",
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" \"http://localhost:8080/30-写作/🌱种子/为什么我要建这个花园\")",
-      "Bash(curl -s \"http://localhost:8080/30-写作/🌱种子/为什么我要建这个花园\")"
+      "Bash(curl -s \"http://localhost:8080/30-写作/🌱种子/为什么我要建这个花园\")",
+      "Bash(curl -s -o /dev/null -w \"种子页 HTTP %{http_code}\\\\n\" \"https://iamvovo2049.github.io/vovo2039/30-写作/🌱种子/为什么我要建这个花园\")",
+      "Bash(lsof -i:5001 -P -n)",
+      "Bash(PYTHONPATH=crawler crawler/.venv/bin/python3.14 -c \"from app.services.garden import publish_to_garden, _slugify; print\\('imports ok'\\); print\\('slug test:', _slugify\\('查理芒格 - 复利思维：100 倍回报', 'fallback'\\)\\)\")",
+      "Bash(PYTHONPATH=crawler crawler/.venv/bin/python3.14 *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5001/api/health)",
+      "Bash(curl -s -o /dev/null -w \"本地 Quartz HTTP %{http_code}\\\\n\" \"http://localhost:8080/40-视频笔记/YouTube/189【英】伯特蘭-羅素《幸福之路》The-Conquest-of-Happiness\")",
+      "Bash(curl -s \"http://localhost:8080/40-视频笔记/YouTube/189【英】伯特蘭-羅素《幸福之路》The-Conquest-of-Happiness\")",
+      "Bash(lsof -i:3200 -P -n)",
+      "Bash(curl -s -o /dev/null -w \"GET /zh: %{http_code}\\\\n\" http://localhost:3200/zh)",
+      "Bash(curl -s -X POST http://localhost:3200/api/garden/publish -H \"Content-Type: application/json\" -d '{}' -w \"\\\\nHTTP %{http_code}\\\\n\")",
+      "Bash(PORT=3201 npx next *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3201/zh echo \"--- BFF empty body ---\")",
+      "Bash(curl -s -X POST http://localhost:3201/api/garden/publish -H \"Content-Type: application/json\" -d '{}' -w \"\\\\nHTTP %{http_code}\\\\n\")",
+      "Bash(curl -s -X POST http://localhost:3201/api/garden/publish -H 'Content-Type: application/json' -d '{\"record_id\":\"48d8c7c2f923\"}' --max-time 240)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:8080/40-视频笔记/YouTube/《幸福哲学书》幸福就在此时-此地\")"
     ]
   }
 }
