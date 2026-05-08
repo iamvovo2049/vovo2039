@@ -4,7 +4,27 @@
       "WebFetch(domain:brave2049.com)",
       "Read(//Users/vovo/self/youtuber_content/**)",
       "Read(//Users/vovo/self/**)",
-      "Bash(rsync -a --exclude='.git' /tmp/quartz-tmp/ /Users/vovo/self/vovo2039/)"
+      "Bash(rsync -a --exclude='.git' /tmp/quartz-tmp/ /Users/vovo/self/vovo2039/)",
+      "Bash(lsof -i:3001 -i:8080 -P -n)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} | size %{size_download}B\\\\n\" http://localhost:8080/)",
+      "Bash(curl -s http://localhost:8080/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:8080/00-花园说明/about)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:8080/20-%E8%AF%BB%E4%B9%A6/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:8080/99-meta/templates/video-note)",
+      "Bash(curl -s -o /dev/null -w \"RSS HTTP %{http_code}\\\\n\" http://localhost:8080/index.xml)",
+      "Bash(curl -s -o /dev/null -w \"sitemap HTTP %{http_code}\\\\n\" http://localhost:8080/sitemap.xml)",
+      "Bash(gh auth *)",
+      "Read(//Users/vovo/self/vovo2039/**)",
+      "Read(//Users/vovo/.ssh/**)",
+      "Bash(ssh -T -o StrictHostKeyChecking=no -o ConnectTimeout=5 git@github.com)",
+      "Bash(gh api *)",
+      "Bash(gh run *)",
+      "Bash(curl -sI https://iamvovo2049.github.io/vovo2039/)",
+      "Bash(curl -s https://iamvovo2049.github.io/vovo2039/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" \"https://iamvovo2049.github.io/vovo2039/00-花园说明/about\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" https://iamvovo2049.github.io/vovo2039/index.xml)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" \"http://localhost:8080/30-写作/🌱种子/为什么我要建这个花园\")",
+      "Bash(curl -s \"http://localhost:8080/30-写作/🌱种子/为什么我要建这个花园\")"
     ]
   }
 }
