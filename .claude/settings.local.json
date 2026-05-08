@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:brave2049.com)",
+      "Read(//Users/vovo/self/youtuber_content/**)",
+      "Read(//Users/vovo/self/**)",
+      "Bash(rsync -a --exclude='.git' /tmp/quartz-tmp/ /Users/vovo/self/vovo2039/)"
+    ]
+  }
+}
