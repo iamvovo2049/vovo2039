@@ -39,7 +39,20 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3201/zh echo \"--- BFF empty body ---\")",
       "Bash(curl -s -X POST http://localhost:3201/api/garden/publish -H \"Content-Type: application/json\" -d '{}' -w \"\\\\nHTTP %{http_code}\\\\n\")",
       "Bash(curl -s -X POST http://localhost:3201/api/garden/publish -H 'Content-Type: application/json' -d '{\"record_id\":\"48d8c7c2f923\"}' --max-time 240)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:8080/40-视频笔记/YouTube/《幸福哲学书》幸福就在此时-此地\")"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:8080/40-视频笔记/YouTube/《幸福哲学书》幸福就在此时-此地\")",
+      "Bash(curl -s -o /dev/null -w \"罗素 HTTP %{http_code}\\\\n\" \"https://iamvovo2049.github.io/vovo2039/40-视频笔记/YouTube/189【英】伯特蘭-羅素《幸福之路》The-Conquest-of-Happiness\")",
+      "Bash(curl -s -o /dev/null -w \"幸福哲学书 HTTP %{http_code}\\\\n\" \"https://iamvovo2049.github.io/vovo2039/40-视频笔记/YouTube/《幸福哲学书》幸福就在此时-此地\")",
+      "Bash(curl -s -o /dev/null -w \"视频笔记目录 HTTP %{http_code}\\\\n\" \"https://iamvovo2049.github.io/vovo2039/40-视频笔记/\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" \"http://localhost:8080/40-视频笔记/YouTube/\")",
+      "Bash(lsof -i:8080 -P -n)",
+      "Bash(xargs -r kill sleep 1 lsof -ti:8080)",
+      "Bash(xargs -r kill -9 sleep 1 echo \"--- 重新检查 ---\" lsof -i:8080 -P -n)",
+      "Bash(curl -s -o /dev/null -w \"Flask %{http_code}\\\\n\" http://localhost:5001/api/health)",
+      "Bash(awk '/^## 完整转录/{exit} /^## /{print}' /Users/vovo/self/vovo2039/content/40-视频笔记/YouTube/35岁危机-烂尾楼-穷途末路如何翻身？康德《判断力批判》全书30小时深度解读（一）：撕碎算法牢笼的哲学解药.md)",
+      "Bash(curl -sX POST http://localhost:5001/api/garden/publish -H 'Content-Type: application/json' -H 'X-API-Token: dev-token-change-me' -d '{\"record_id\":\"55a2fe6a543e\"}' --max-time 600 -w '\\\\n=== HTTP %{http_code} 耗时 %{time_total}s ===\\\\n')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3201/zh)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3200/zh)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8080/)"
     ]
   }
 }
